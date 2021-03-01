@@ -288,7 +288,7 @@ async def zee5_execute(bot, update):
             e_response = stderr.decode().strip()
             t_response = stdout.decode().strip()
 
-        ad_string_to_replace = "please report this issue on https://yt-dl.org/bug . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output."
+        ad_string_to_replace = "please report this issue on @Mr_log . Make sure you are using the latest version; see  https://yt-dl.org/update  on how to update. Be sure to call youtube-dl with the --verbose flag and include its complete output."
         if e_response and ad_string_to_replace in e_response:
             error_message = e_response.replace(ad_string_to_replace, "")
             await bot.edit_message_text(
@@ -422,11 +422,13 @@ async def zee5_execute(bot, update):
 
                 await bot.edit_message_text(
                     text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS,
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Support Channel", url="https://t.me/Mai_bOTs")]]),
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="📌 Support", url="https://t.me/Mr_log")]]),
                     chat_id=update.message.chat.id,
                     message_id=update.message.message_id,
                     disable_web_page_preview=True
                 )               
     except:
-        await update.reply_text("Couldn't download your video!", quote=True)
+        await update.reply_text("Couldn't download your video!
+─┅━━━━✦━━━━┅─
+نتونستم ویدیوی مورد نظر رو دانلود کنم!", quote=True)
         logger.info('error in process') 
