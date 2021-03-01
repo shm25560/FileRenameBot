@@ -428,7 +428,5 @@ async def zee5_execute(bot, update):
                     disable_web_page_preview=True
                 )               
     except:
-        await update.reply_text("Couldn't download your video!
-─┅━━━━✦━━━━┅─
-نتونستم ویدیوی مورد نظر رو دانلود کنم!", quote=True)
+        await update.reply_text("Couldn't download your video!", quote=True)
         logger.info('error in process') 
